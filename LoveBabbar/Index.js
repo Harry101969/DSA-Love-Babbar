@@ -90,3 +90,21 @@ function rangePrime(N) {
 }
 
 rangePrime(10);
+
+function rangedPrime2(N) {
+  for (let i = 2; i <= N; i++) {
+    let isPrime = true;
+    for (let j = 2; j <= i / 2; j++) {
+      if (i % j == 0) {
+        console.log(j);
+        isPrime = false;
+        console.log(i, "Not a prime number!");
+        break;
+      }
+    }
+    if (isPrime) {
+      console.log(i, "Is a prime number!");
+    }
+  }
+}
+rangedPrime2(10);
